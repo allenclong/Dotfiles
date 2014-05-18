@@ -1,0 +1,18 @@
+[user]
+	name = allen_long
+	email = along@amerisure.com
+[core]
+	excludesfile = g:/.gitignore_global
+[push]
+	defualt = simple
+	default = simple
+[gui]
+	recentrepo = I:/Actuarl/Predictive Modeling/WC_Claim_Development
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
