@@ -5,4 +5,5 @@
 *.lck
 # Temporary files
 ~*
+*~
 Thumbs.db
