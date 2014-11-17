@@ -9,4 +9,5 @@
 !*.gitconfig
 !*.gitignore_global
 !*SAS/autoexec.sas
-
+!*.bash
+!*.sh
