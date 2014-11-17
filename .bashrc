@@ -24,6 +24,12 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
+#Remove warning message for gvim global menu
+function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+#add gvim to PATH
+export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
+
 # git completion
 source git-completion.bash
 
@@ -131,10 +137,4 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-#Remove warning message for gvim global menu
-function gvim () { (/usr/bin/gvim -f "$@" &) }
-
-#add gvim to PATH
-export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
 
