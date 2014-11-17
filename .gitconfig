@@ -16,3 +16,7 @@
 	tool = vimdiff
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	log-allen = log --graph --color --pretty=format:'%Cred%d%Creset %C(yellow)%an%Creset - %ar : %s' 
+
+	##with out colors
+	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 

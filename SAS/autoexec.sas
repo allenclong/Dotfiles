@@ -1,9 +1,9 @@
-﻿filename dummy '.';
+﻿/*filename dummy '.';
 %let pwd=%sysfunc(pathname(dummy));
 filename dummy "&_ClientProjectPath";
 %let pwd=%sysfunc(pathname(dummy));
 
-%put &pwd;
+%put &pwd;*/
 
 /*%put EGP file is &_CLIENTPROJECTPATH;
 %put SAS program file is &_SASProgramFile;
