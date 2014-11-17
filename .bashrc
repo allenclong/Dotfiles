@@ -25,7 +25,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 #Remove warning message for gvim global menu
-function gvim () { (/usr/bin/gvim -f "$@" &) }
+#function gvim () { (/usr/bin/gvim -f "$@" &) }
 
 #add gvim to PATH
 export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
