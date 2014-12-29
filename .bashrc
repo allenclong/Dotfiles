@@ -24,6 +24,12 @@ shopt -s checkwinsize
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
+#Remove warning message for gvim global menu
+#function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+#add gvim to PATH
+export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
+
 # git completion
 source git-completion.bash
 
@@ -91,7 +97,7 @@ fi
 # prompt color and style
 source git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]"
+# export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]"
 
 
 # some more ls aliases
@@ -99,6 +105,18 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vimdiff="vim -d"
+
+alias pm="cd /i/actuarl/predictive\ modeling/"
+alias claim_triage="cd /i/actuarl/predictive\ modeling/claim_triage/"
+alias EG="start SEGuide.exe *.egp"
+alias eg="start SEGuide.exe *.egp"
+alias aym="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
+alias AYM="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
+
+
+
+#alias gvim="C:\Program Files (x86)\Vim\vim73\gvim.exe"
+#alias git log --allen="git log --pretty=format:'%d %an - %ar : %s' --graph"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -5,6 +5,9 @@
 	excludesfile = .gitignore_global
 [gui]
 	recentrepo = /home/allen/work/modeling-documentation
+[push]
+	defualt = simple
+	default = simple
 [diff]
 	tool = vimdiff
 [difftool]
@@ -13,7 +16,13 @@
 	tool = vimdiff
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[credential]
-	helper = cache --timeout=7200
+	
+log-allen = log --graph --color --pretty=format:'%Cred%d%Creset %C(yellow)%an%Creset - %ar : %s' 
+
+	##with out colors
+	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 
 [push]
 	default = simple
+
+[credential]
+	helper = cache --timeout=7200
