@@ -27,3 +27,6 @@ imap <c-s> <Esc><c-s>
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
+
+:source ~/autocorrect.vim
+iab buidling building
