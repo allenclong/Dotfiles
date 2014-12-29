@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But not these ...
+!*.vimrc
+!*.vim
+!*.bashrc
+!*.gitignore
+!*.gitconfig
+!*.gitignore_global
+!*SAS/autoexec.sas
+

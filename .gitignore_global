@@ -1,0 +1,9 @@
+# SAS data files #
+*.sas7bdat
+*.sas~
+*.sas.swp
+*.lck
+# Temporary files
+~*
+*~
+Thumbs.db
