@@ -97,7 +97,7 @@ fi
 # prompt color and style
 source git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]"
+# export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]"
 
 
 # some more ls aliases
