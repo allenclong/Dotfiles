@@ -1,50 +1,20 @@
-﻿/*filename dummy '.';
-%let pwd=%sysfunc(pathname(dummy));
-filename dummy "&_ClientProjectPath";
-%let pwd=%sysfunc(pathname(dummy));
-
-%put &pwd;*/
-
-/*%put EGP file is &_CLIENTPROJECTPATH;
-%put SAS program file is &_SASProgramFile;
-%let localProjectPath = 
-   %sysfunc(substr(%sysfunc(dequote(&_CLIENTPROJECTPATH)), 1, 
-   %sysfunc(findc(%sysfunc(dequote(&_CLIENTPROJECTPATH)), %str(/\), -255 ))));
-%Put Path of current EG project is &localProjectPath;
-Data _NULL_;
-	localPath="&localProjectPath";
-	newlocalPath=tranwrd(localPath,'I:\','\\fhamifspdvs\actuarl-undw\');
-	Call Symput('localpath',newlocalpath);
-Run;*%Include "%sysfunc(trim(&localPath))File.sas";*/
-
+﻿
 LIBNAME DADM01 Oracle path="AWHPRD" schema=ADMP;   /*the Actuarial Datamart*/
 LIBNAME WEBPRD Oracle user=p010080d	password=secret path="WEBPRD" schema=ADMP;
 LIBNAME AWH Oracle path="AWHPRD" schema=AWH; /* the Warehouse including Web Reporting*/
-
+/*
 LIBNAME AWHDEV Oracle path="AWHDEV" schema=AWH;* user="p010080d" password=p010080d;
-*Libname WEBDEV Oracle path="WEBDEV" schema=ADMP user=p010080d password=p010080d;
-*LIBNAME AWHAPPDV Oracle path="AWHAPPDV" schema=AWH ;*user=p010080d password=p010080d;
-*LIBNAME AWHAPPDV Oracle path="AWHAPPDV" schema=ADMP ;*user=p010080d password=p010080d;
-*LIBNAME AWHAPPTS Oracle path="AWHAPPTS" user=tsocl09 password=tsocl09;
-LIBNAME AWHQAS Oracle path="AWHQAS" schema=AWH;* user="p010080d" password=p010080d;
-*Libname AWHTST Oracle path="AWHTST" schema=AWH;* user="p010080d" password=p010080d;
-*Libname ADMTST Oracle path="AWHTST" schema=ADMP;* user="p010080d" password=p010080d;
-*LIBNAME PSPRD Oracle path="PSPRD" schema=SYSADM user=p010080d password=psf80dprd;
+Libname WEBDEV Oracle path="WEBDEV" schema=ADMP user=p010080d password=p010080d;
+LIBNAME AWHAPPDV Oracle path="AWHAPPDV" schema=AWH ;*user=p010080d password=p010080d;
+LIBNAME AWHAPPDV Oracle path="AWHAPPDV" schema=ADMP ;*user=p010080d password=p010080d;
+LIBNAME AWHAPPTS Oracle path="AWHAPPTS" user=tsocl09 password=tsocl09;
+*/
+*LIBNAME AWHQAS Oracle path="AWHQAS" schema=AWH;* user="p010080d" password=p010080d;
+/*Libname AWHTST Oracle path="AWHTST" schema=AWH;* user="p010080d" password=p010080d;
+Libname ADMTST Oracle path="AWHTST" schema=ADMP;* user="p010080d" password=p010080d;
+LIBNAME PSPRD Oracle path="PSPRD" schema=SYSADM user=p010080d password=psf80dprd;
+*/
 
-*Libname SAGroup V9 '\\fhamisapd02\Users\Group\';   /*Generic folder all have access to*/
-*Libname WCModel v9 '\\fhamisapd02\Users\Group\WC_Model_Data\Tables';
-*Libname AIC v9 '\\fhamisapd02\Users\p010080d\WCModel\Output';
-*Libname C_Auto V9 '\\fhamisapd02\Users\Group\C_Auto\';
-*Libname Reserves v9 '\\fhamifile01\Actuarl-Undw\Actuarl\Reserving\Databases\SAS\Data\';
-*Libname RsvData V9 '\\fhamifspdvs.amerisure.int\Actuarl-Undw\Actuarl\Reserving\Databases\Warehouse\';
-*Libname IBNRallo V9 '\\fhamifspdvs.amerisure.int\Actuarl-Undw\Actuarl\Reserving\Databases\IBNRallo\';
-***EMB macros;
-*%Include '\\fhamisapd02\users\p010080d\Emblem\sasmacro\SASEMB.sas';
-
-*** Old Libraries;
-*Libname WC V9 '\\fhamisapd02\Users\Group\WC Data\';
-*Libname UWModel v9 '\\fhamisapd02\Users\p010080d\UnderwritingModel\WCModel';
-*Libname WCModel v9 '\\fhamisapd02\Users\p010080d\UnderwritingModel\WCModel';
 
 
 **** Options*****;

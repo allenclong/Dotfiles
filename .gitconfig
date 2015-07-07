@@ -3,6 +3,7 @@
 	email = along@amerisure.com
 [core]
 	excludesfile = g:/.gitignore_global
+	autocrlf = false
 [push]
 	defualt = simple
 	default = simple

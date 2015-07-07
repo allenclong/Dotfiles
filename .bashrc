@@ -105,15 +105,17 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vimdiff="vim -d"
+alias ld='ls -d */'
 
 alias pm="cd /i/actuarl/predictive\ modeling/"
 alias claim_triage="cd /i/actuarl/predictive\ modeling/claim_triage/"
 alias EG="start SEGuide.exe *.egp"
 alias eg="start SEGuide.exe *.egp"
+alias rst="gvim *.rst &"
 alias aym="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
 alias AYM="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
-
-
+alias macros="cd //fhamisapd01/SAS_Macros/"
+#alias em="start '/c/Program Files/SASHome/SASEnterpriseMinerClient/13.2/em.exe'"
 
 #alias gvim="C:\Program Files (x86)\Vim\vim73\gvim.exe"
 #alias git log --allen="git log --pretty=format:'%d %an - %ar : %s' --graph"
