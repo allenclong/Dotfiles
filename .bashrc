@@ -1,5 +1,6 @@
+export PS1='>> '
 
-# ~/.bashrc: executed by bash(1) for non-login shells.
+ #~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -148,3 +149,6 @@ export PATH="/home/allen/anaconda/bin:$PATH"
 
 # added by Anaconda 2.1.0 installer
 export PATH="/home/allen/anaconda/bin:$PATH"
+
+# added by Anaconda3 4.0.0 installer
+export PATH="/home/allen/anaconda3/bin:$PATH"
