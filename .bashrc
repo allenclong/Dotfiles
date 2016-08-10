@@ -107,7 +107,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias vimdiff="vim -d"
-
+alias ls='ls --color=auto'
 alias pm="cd /i/actuarl/predictive\ modeling/"
 alias claim_triage="cd /i/actuarl/predictive\ modeling/claim_triage/"
 alias EG="start SEGuide.exe *.egp"
