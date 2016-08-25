@@ -1,7 +1,5 @@
 # export PS1=">> "
 # ~/.bashrc: executed by bash(1) for non-login shells.
-export PS1='>> '
-
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -117,8 +115,6 @@ alias pm="cd /i/actuarl/advanced\ analytics/projects/"
 alias aa="cd /i/actrl/advanced\ analytics/"
 alias sandbox="cd /i/actrl/sandbox/allen/"
 alias ofa="cd /i/actrl/advanced\ analytics/projects/underwriting/"
-alias ls='ls --color=auto'
-alias claim_triage="cd /i/actuarl/predictive\ modeling/claim_triage/"
 alias EG="start SEGuide.exe *.egp"
 alias eg="start SEGuide.exe *.egp"
 alias rst="gvim *.rst &"
@@ -192,15 +188,3 @@ else
     start_agent;
 
 fi
-#Remove warning message for gvim global menu
-function gvim () { (/usr/bin/gvim -f "$@" &) }
-
-
-# added by Anaconda 2.1.0 installer
-export PATH="/home/allen/anaconda/bin:$PATH"
-
-# added by Anaconda 2.1.0 installer
-export PATH="/home/allen/anaconda/bin:$PATH"
-
-# added by Anaconda3 4.0.0 installer
-export PATH="/home/allen/anaconda3/bin:$PATH"
