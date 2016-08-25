@@ -2,13 +2,14 @@
 	name = allen_long
 	email = along@amerisure.com
 [core]
-	excludesfile = g:/.gitignore_global
+	#excludesfile = g:/.gitignore_global
 	autocrlf = false
+	excludesfile = .gitignore_global
+[gui]
+	recentrepo = /home/allen/work/modeling-documentation
 [push]
 	defualt = simple
 	default = simple
-[gui]
-	recentrepo = I:/Actuarl/Predictive Modeling/WC_Claim_Development
 [diff]
 	tool = vimdiff
 [difftool]
@@ -25,3 +26,14 @@
 [http]
 #[http]
 #	sslCAInfo = g:/git-certs/cert.pem
+	#lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	
+#log-allen = log --graph --color --pretty=format:'%Cred%d%Creset %C(yellow)%an%Creset - %ar : %s' 
+
+	##with out colors
+	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 
+[push]
+	default = simple
+
+[credential]
+	helper = cache --timeout=7200
