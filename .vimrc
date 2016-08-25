@@ -1,7 +1,7 @@
 :set lbr!
 :set tabstop=4
 :set autoindent
-
+:set nu!
 " Set timeout for key sequences to half
 :set timeoutlen=500
 
