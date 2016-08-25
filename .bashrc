@@ -1,3 +1,4 @@
+# export PS1=">> "
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -31,7 +32,7 @@ shopt -s checkwinsize
 export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
 
 # git completion
-source git-completion.bash
+source ~/git-completion.bash
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -95,9 +96,12 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # prompt color and style
-source git-prompt.sh
+source ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-# export PS1="\[\033[01;34m\]\W\$(__git_ps1)$ \[\033[00m\]"
+#export PS1="\[\033[01;37m\]\u @ \h\[\033[01;36m\]\$(__git_ps1) \n>> \[\033[00m\]"
+#export PS1= "\[\033[01;36m\]\$(__git_ps1) @ \[\033[01;37m\]\h \n>> \[\033[00m\]"
+#export PS1="\[\033[01;36m\]\$(__git_ps1) \[\033[01;34m\]@ \h \n>> \[\033[00m\]"
+
 
 
 # some more ls aliases
@@ -107,8 +111,10 @@ alias l='ls -CF'
 alias vimdiff="vim -d"
 alias ld='ls -d */'
 
-alias pm="cd /i/actuarl/predictive\ modeling/"
-alias claim_triage="cd /i/actuarl/predictive\ modeling/claim_triage/"
+alias pm="cd /i/actuarl/advanced\ analytics/projects/"
+alias aa="cd /i/actrl/advanced\ analytics/"
+alias sandbox="cd /i/actrl/sandbox/allen/"
+alias ofa="cd /i/actrl/advanced\ analytics/projects/underwriting/"
 alias EG="start SEGuide.exe *.egp"
 alias eg="start SEGuide.exe *.egp"
 alias rst="gvim *.rst &"
@@ -116,7 +122,7 @@ alias aym="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
 alias AYM="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
 alias macros="cd //fhamisapd01/SAS_Macros/"
 #alias em="start '/c/Program Files/SASHome/SASEnterpriseMinerClient/13.2/em.exe'"
-
+alias ap="cd /j/MyAmerisure/ActuarialProducts/Modeling/"
 #alias gvim="C:\Program Files (x86)\Vim\vim73\gvim.exe"
 #alias git log --allen="git log --pretty=format:'%d %an - %ar : %s' --graph"
 
@@ -140,3 +146,45 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+
+SSH_ENV=$HOME/.ssh/environment
+
+   
+
+# start the ssh-agent
+
+function start_agent {
+
+    echo "Initializing new SSH agent..."
+
+    # spawn ssh-agent
+
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+
+    echo succeeded
+
+    chmod 600 "${SSH_ENV}"
+
+    . "${SSH_ENV}" > /dev/null
+
+    /usr/bin/ssh-add
+
+}
+
+   
+
+if [ -f "${SSH_ENV}" ]; then
+
+     . "${SSH_ENV}" > /dev/null
+
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+
+        start_agent;
+
+    }
+
+else
+
+    start_agent;
+
+fi
