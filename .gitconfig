@@ -5,8 +5,6 @@
 	#excludesfile = g:/.gitignore_global
 	autocrlf = false
 	excludesfile = .gitignore_global
-[gui]
-	recentrepo = /home/allen/work/modeling-documentation
 [push]
 	defualt = simple
 	default = simple
@@ -17,21 +15,9 @@
 [merge]
 	tool = vimdiff
 [alias]
-#	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lg = log --color --graph --date=short --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(magenta) %cd (%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 	log-allen = log --graph --color --pretty=format:'%C(magenta)%d%Creset %C(yellow)%an%Creset - %ar : %s' 
 
-	##with out colors
-	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 
-[http]
-#[http]
-#	sslCAInfo = g:/git-certs/cert.pem
-	#lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	
-#log-allen = log --graph --color --pretty=format:'%Cred%d%Creset %C(yellow)%an%Creset - %ar : %s' 
-
-	##with out colors
-	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 
 [push]
 	default = simple
 
