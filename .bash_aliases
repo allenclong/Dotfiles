@@ -24,7 +24,7 @@ alias egrep='egrep --color=auto'
 alias gh='history|grep'
 alias count='find . -type f | wc -l'
 # cp (copy) with a progress bar
-alias cpv='rsync -ah --info=progress2'
+Alias cpv='rsync -ah --info=progress2'
 # find top level of git repo
 alias startgit='cd git rev-parse --show-toplevel'
 alias cg='cd git rev-parse --show-toplevel'
