@@ -1,3 +1,5 @@
+# Domino repo files %
+*/.domino/*
 # SAS data files #
 *.sas7bdat
 *.sas~
@@ -8,3 +10,6 @@
 *~
 *swp
 Thumbs.db
+*/To Chuck/*
+.idea/
+

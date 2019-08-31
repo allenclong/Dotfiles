@@ -4,6 +4,9 @@
 :set nu!
 " Set timeout for key sequences to half
 :set timeoutlen=500
+:set lines=50
+:set columns=120
+:color industry
 
 :imap jk <Esc>
 " Allow to save when exiting insert mode
@@ -29,6 +32,7 @@ imap <c-s> <Esc><c-s>
 nmap <F2> :update<CR>
 vmap <F2> <Esc><F2>gv
 imap <F2> <c-o><F2>
+nmap python = system(shellescape('C:\ProgramData\Anaconda3\python\python.exe'))<cr>
 
 :source ~/autocorrect.vim
 iab buidling building

@@ -1,3 +1,13 @@
+cd /i/advanced\ analytics/
+if [ -e /c/users/p010080d/.dominoconfig/install_config.json ];
+	then 
+		sed -i 's/"S3"/"API"/g' /c/users/p010080d/.dominoconfig/install_config.json
+fi
+if [ -e /c/users/p010080d.AMERISURE/.dominoconfig/install_config.json ];
+	then
+		sed -i 's/"S3"/"API"/g' /c/users/p010080d.AMERISURE/.dominoconfig/install_config.json
+fi
+
 # export PS1=">> "
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -29,7 +39,7 @@ shopt -s checkwinsize
 #function gvim () { (/usr/bin/gvim -f "$@" &) }
 
 #add gvim to PATH
-export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73"
+export PATH=$PATH:"/c/Program Files (x86)/Vim/vim73":"//amerisure/root/Actuarl-Undw/Advanced Analytics/Data Repository"
 
 # git completion
 source ~/git-completion.bash
@@ -105,25 +115,41 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 
 # some more ls aliases
+alias rm='rm -i'
+alias ls='ls --color=auto'
 alias ll='ls -alF'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
 alias la='ls -A'
-alias l='ls -CF'
+#alias l='ls -CF'
 alias vimdiff="vim -d"
 alias ld='ls -d */'
-
-alias pm="cd /i/actuarl/advanced\ analytics/projects/"
-alias aa="cd /i/actrl/advanced\ analytics/"
-alias sandbox="cd /i/actrl/sandbox/allen/"
-alias ofa="cd /i/actrl/advanced\ analytics/projects/underwriting/"
+alias clip='/dev/clipboard/'
+alias tree='cmd //c tree/'
+alias pm="cd /i/advanced\ analytics/projects/"
+alias aa="cd /i/advanced\ analytics/"
+alias dr="cd /i/advanced\ analytics/data\ repository/"
+alias sandbox="cd /i/advanced\ analytics/sandbox/allen/"
+alias ofa="cd /i/advanced\ analytics/projects/underwriting/"
 alias EG="start SEGuide.exe *.egp"
 alias eg="start SEGuide.exe *.egp"
 alias rst="gvim *.rst &"
-alias aym="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
-alias AYM="cd /i/actuarl/field\ products/Acc\ Year\ Monitor/"
+alias aym="cd /i/actrl/Products\ and\ Tools/Accident\ Year\ Monitor/"
+alias AYM="cd /i/actrl/Products\ and\ Tools/Accident\ Year\ Monitor/"
 alias macros="cd //fhamisapd01/SAS_Macros/"
+alias tools="cd /i/advanced\ analytics/Tools/"
+alias products="cd /i/actrl/Products\ and\ Tools/"
+alias sched="cd /i/advanced\ analytics/administrative/scheduled\ tasks/"
 #alias em="start '/c/Program Files/SASHome/SASEnterpriseMinerClient/13.2/em.exe'"
 alias ap="cd /j/MyAmerisure/ActuarialProducts/Modeling/"
-#alias gvim="C:\Program Files (x86)\Vim\vim73\gvim.exe"
+#alias gvim="C:\Program Files (x86)\Vim\vim80\gvim.exe"
+alias gvim="/c/Program\ Files\ \(x86\)/Vim/vim80/gvim.exe"
+#alias excel='for %1 in (*.xlsx) do start excel "%%1"'
+
 #alias git log --allen="git log --pretty=format:'%d %an - %ar : %s' --graph"
 
 # Add an "alert" alias for long running commands.  Use like so:

@@ -1,10 +1,11 @@
 [user]
 	name = allen_long
-	email = along@amerisure.com
+	email = allenclong@gmail.com
 [core]
 	#excludesfile = g:/.gitignore_global
-	autocrlf = false
-	excludesfile = .gitignore_global
+	autocrlf = true
+	excludesfile = G:\\.gitignore_global
+    hookspath = /g/.git/hooks
 [gui]
 	recentrepo = /home/allen/work/modeling-documentation
 [push]
@@ -12,14 +13,18 @@
 	default = simple
 [diff]
 	tool = vimdiff
+	#tool = winmerge
 [difftool]
 	prompt = false
 [merge]
-	tool = vimdiff
+#	tool = vimdiff
+[mergetool "winmerge"]
+	cmd = \"C:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" \"$MERGED\"
 [alias]
 #	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lg = log --color --graph --date=short --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %C(magenta) %cd (%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 	log-allen = log --graph --color --pretty=format:'%C(magenta)%d%Creset %C(yellow)%an%Creset - %ar : %s' 
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
 	##with out colors
 	#log-allen = log --graph --color --pretty=format:'%d %an - %ar : %s' 
@@ -37,3 +42,11 @@
 
 [credential]
 	helper = cache --timeout=7200
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files (x86)/WinMerge/WinMergeU.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe' "
+	trustExitCode = true
+
+[init]
+	templatedir = ~/.git-templates
